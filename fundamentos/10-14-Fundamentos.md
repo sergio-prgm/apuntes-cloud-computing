@@ -5,7 +5,7 @@ Para comenzar con los ejercicios de laboratorio:
 3. Seleccionar C# en la lista desplegable de lenguajes y elegir <strong>Aplicación de consola</strong>.
 4. Dar un nombre al proyecto, elegir el directorio en el que será creado y clic en siguiente.
 5. Elegir la opción <strong>.NET 6.0 (Long-term support)</strong> y clic en siguiente (Este paso puede tardar varios minutos).
-6. Cuando todo está listo debe aparecer algo similar al [ejercicio 1](#Laboratorio\ 1#Ejercicio\ 1)
+6. Cuando todo está listo debe aparecer algo similar al [ejercicio 1](#ejercicio-1) 
 
 ## Laboratorio 1
 ### Ejercicio 1
@@ -72,7 +72,7 @@ Promedio de calificaciones | double | media de las calificaciones obtenidas
 Descripción | string | descripción del curso
 
 ### Ejercicio 2: variables de tipos numéricos
-Iniciar un [nuevo proyecto](#iniciar\ un\ proyecto\ de\ C\ con\ visual\ studio) en Visual Studio y eliminar el contenido por defecto. A continuación iremos creando los campos que hemos definido en el ejercicio anterior.
+Iniciar un [nuevo proyecto](#iniciar-un-proyecto-de-c-con-visual-studio) en Visual Studio y eliminar el contenido por defecto. A continuación iremos creando los campos que hemos definido en el ejercicio anterior.
 
 > En todos los lenguajes de programación existen convenciones y estándares para normalizar el nombramiento de variables y métodos. Conviene seguir una serie de reglas para facilitar el desarrollo propio y grupo, además de que ayuda a entender el código de librerías y frameworks que utilicemos. En general, lo más importante es que los nombres de las variables sean lo más explícitos posible (no importa si ocupan más espacio).
 
@@ -95,7 +95,6 @@ myGPA = 0.0;
 Console.WriteLine(courseID);
 Console.WriteLine(lengthInWeeks);
 Console.WriteLine(myGPA);
-
 ```
 
 > Si bien en los ejercicios primero se declaran y luego se asigna un valor a las variables este proceso se puede simplificar en un solo paso como veremos a continuación.
