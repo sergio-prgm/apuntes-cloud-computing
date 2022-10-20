@@ -107,15 +107,72 @@ public static int FibonacciRecursive(int n)
 
 Nombre | Tamaño | Tipo | Características
 --- | --- | --- | --- |
+Array | Estático | Estático |
 List | Dinámico | Estático |
 ArrayList | Dinámico | Dinámico |
 Queue | Dinámico | Dinámico\* | FiFo\**
 Stack | Dinámico | Dinámico\* | FiLo\**
 Dictionary | Dinámico | Estático | Clave-Valor
+SortedList | | | Clave-Valor · Se puede acceder a los valores mediante la clave o mediante el índice
 
 > **\*** Se puede pasar un *tipo genérico* al instanciar estas estructuras, en cuyo caso pasan a ser de tipo estático.
 
 > **\*\*** Al iterar con un foreach sobre estas estructuras se recorren de la misma manera en la que se editan, es decir, *Queue* se recorre de inicio a fin y *Stack* se recorre de fin a inicio.
+
+### Matriz *Array*
+
+Tipo de colección más básico. De hecho, es el único tipo de colección que no viene de <code>System.Collections</code>. El tamaño y el tipo se deben declarar al instanciar un nuevo *Array* y no se pueden variar (también se puede declarar con el tipo *object* que permite utilizar cualquier tipo de variable).
+
+Útil para cuando simplemente se necesita una colección con valores del mismo tipo a la que no se van a realizar muchas modificaciones.
+
+```csharp
+int[] array1 = new int[5];
+int[] array2 = new int[] {1, 3, 5, 7, 9};
+
+object[] array3 = new object[4];
+array3[0] = 1;
+array3[1] = "palabra";
+array3[4] = 2; // Causa una excepción IndexOutOfRangeException
+// Poner array con arrays
+```
+
+### Lista *List*
+
+*List* es muy similar a *Array*, siendo la mayor diferencia entre las dos que en *List* las dimensiones son variables. Esto permite realizar un gran número de operaciones sobre este tipo de colecciones, motivo por el que son de las más utilizadas.
+
+```csharp
+List<int> lista = new(); // Inicia una lista de int vacía
+lista[0] = 3;
+lista.Add(4);
+lista.Remove(4); // Elimina el elemento especificado. Devuelve un bool
+
+char[] arrayChar = { 'e', 'w', 'q', 'w'};
+List<char> lista2 = new(arrayChar);
+
+List<float> floatList = new() { 2.3f, 3.4f, 5.4f};
+```
+
+### Pila *Stack*
+
+```csharp
+```
+
+### Cola *Queue*
+
+```csharp
+```
+
+### Diccionario *Dictionary*
+
+```csharp
+```
+
+### SortedList
+
+```csharp
+```
+
+---
 
 ## Laboratorio 4: estructuras de datos y algoritmos
 
