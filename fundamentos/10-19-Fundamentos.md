@@ -139,7 +139,7 @@ Todo lo declarado dentro de un namespace se puede utilizar dentro del mismo, per
 
 ### Depuración *Debugging*
 
-Es el proceso de eliminar todos los errores inesperados (sobre todo [errores lógicos](###tipos-de-errores)
+Es el proceso de eliminar todos los errores inesperados (sobre todo [errores lógicos](#tratamiento-de-errores))
 
 ## Laboratorio 5: Bugs y Errores
 
