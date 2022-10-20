@@ -5,7 +5,9 @@
 ## Namespaces de las colecciones
 
 > System.Collections.Generic
+
 > System.Collections.Concurrent
+
 > System.Collections
 
 ### Namespaces
@@ -52,42 +54,42 @@ Todo lo declarado dentro de un namespace se puede utilizar dentro del mismo, per
 
 * "Importar" el namespace con la palabra clave *using* en el inicio del fichero:
 
-```csharp
-// En program.cs
+  ```csharp
+  // En program.cs
 
-using esteFichero;
-using esteFichero.OtraCosa;
+  using esteFichero;
+  using esteFichero.OtraCosa;
 
-internal class Program
-{
-  private static void Main(string[] args)
+  internal class Program
   {
-    Banco banco = new();
-    banco.longitud = 3
+    private static void Main(string[] args)
+    {
+      Banco banco = new();
+      banco.longitud = 3
 
-    Mesa mesa = new();
-    mesa.patas = 4;
+      Mesa mesa = new();
+      mesa.patas = 4;
+    }
   }
-}
-```
+  ```
 
 * Usar la "notación de puntos" para usar cada una de las clases del namespace:
 
-```csharp
-// En program.cs
+  ```csharp
+  // En program.cs
 
-internal class Program
-{
-  private static void Main(string[] args)
+  internal class Program
   {
-    esteFichero.Banco banco = new();
-    banco.longitud = 3;
+    private static void Main(string[] args)
+    {
+      esteFichero.Banco banco = new();
+      banco.longitud = 3;
 
-    esteFichero.OtraCosa.Mesa mesa = new();
-    mesa.patas = 4;
+      esteFichero.OtraCosa.Mesa mesa = new();
+      mesa.patas = 4;
+    }
   }
-}
-```
+  ```
 
 ### Métodos de colecciones
 
@@ -136,6 +138,8 @@ internal class Program
   ```
 
 ### Depuración *Debugging*
+
+Es el proceso de eliminar todos los errores inesperados (sobre todo [errores lógicos](###tipos-de-errores)
 
 ## Laboratorio 5: Bugs y Errores
 
