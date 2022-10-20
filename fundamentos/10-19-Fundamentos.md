@@ -334,9 +334,188 @@ namespace Laboratorio_6
 
 ```csharp
 // En Program.cs
+static void Main(string[] args)
+{
+    // E1 Tarea 1
+    Console.WriteLine("Do you want to create a:\n");
+    Console.WriteLine("S - Student\n");
+    Console.WriteLine("I - Instructor\n");
+    Console.WriteLine("Q - Quit");
+    //
+
+    // E1 Tarea 2
+    char response = Convert.ToChar(Console.Read());
+    //
+
+    switch (response)
+    {
+        case 's':
+        case 'S':
+            CreateStudent();
+            break;
+        case 'i':
+        case 'I':
+            CreateInstructor();
+            break;
+        case 'q':
+        case 'Q':
+            Environment.Exit(0);
+            break;
+    }
+    static void CreateStudent()
+    {
+        string first, last, gender;
+        int age;
+
+        Console.ReadLine();
+
+        Console.WriteLine("Enter the student's first name.");
+        first = Console.ReadLine();
+
+        Console.WriteLine("Enter the student's last name.");
+        last = Console.ReadLine();
+
+        Console.WriteLine("Enter the student's gender.");
+        gender = Console.ReadLine();
+
+        Console.WriteLine("Enter the student's age (please input a number).");
+        age = Convert.ToInt32(Console.ReadLine());
+
+        Student newStudent = new Student(first, last, gender, age);
+    }
+
+    static void CreateInstructor()
+    {
+        string first, last, gender;
+        int age;
+
+        Console.ReadLine();
+
+        Console.WriteLine("Enter the instructor's first name.");
+        first = Console.ReadLine();
+
+        Console.WriteLine("Enter the instructor's last name.");
+        last = Console.ReadLine();
+
+        Console.WriteLine("Enter the instructor's gender.");
+        gender = Console.ReadLine();
+
+        Console.WriteLine("Enter the instructor's age.");
+        age = Convert.ToInt32(Console.ReadLine());
+
+        Instructor newInstructor = new Instructor(first, last, gender, age);
+    }
+
+    static void SaveToFile(Person person)
+    {
+        string fileName;
+        string header;
+        if (person is Student)
+        {
+            fileName = "Students.txt";
+            header = "Students";
+            WriteContents(header, fileName, person);
+            ReadFile(fileName);
+        }
+        else
+        {
+            fileName = "Instructors.txt";
+            header = "Instructors";
+            WriteContents(header, fileName, person);
+            ReadFile(fileName);
+        }
+    }
+  }
+}
 
 ```
 
 ### Ejercicio 1: leer y escribir con la consola
 
 #### Tarea 1: mostrar output en la consola
+
+#### Tarea 2: leer input de la consola
+
+Las dos tareas anteriores se encuentran ya resueltas en el código anterior entre <code>// E1 Tarea</code>.
+
+### Ejercicio 2: leer y escribir archivos
+
+#### Tarea 1: escribir archivos de texto
+
+```csharp
+static void CreateStudent()
+{
+  // ...
+  SaveToFile(newStudent)
+}
+
+static void CreateInstructor()
+{
+  // ...
+  SaveToFile(newInstructor)
+}
+
+static void WriteContents(string header, string fileName, Person person)
+{
+    if (!File.Exists(fileName))
+    {
+        StreamWriter writer = new StreamWriter(fileName);
+
+        writer.WriteLine(header);
+        writer.Write(person.FirstName + ", ");
+        writer.Write(person.LastName + ", ");
+        writer.Write(person.Gender + ", ");
+        writer.Write(person.Age);
+        writer.Close();
+    }
+    else
+    {
+        StreamWriter writer = File.AppendText(fileName);
+
+        writer.WriteLine();
+        writer.WriteLine($"{person.FirstName}, {person.LastName}, {person.Gender}, {person.Age}");
+        writer.Close();
+    }
+}
+```
+
+> Al ejecutar este programa desde Visual Studio, los archivos que se crean se almacenan dentro de una carpeta *Debug*(/bin/Debug/net6.0/). Si se ejecuta fuera de Visual Studio se guarda en la carpeta correspondiente al proyecto (en mi caso dentro de Laboratorio_6).
+
+Para ejecutar un programa fuera de Visual Studio:
+
+1. Abrir una terminal (en el menú de Windows escribir "cmd" o "símbolo del sistema").
+2. Ir a la carpeta en la que se encuentra (también se puede ir a la carpeta en la que se encuentra el proyecto, clic derecho abrir con símbolo del sistema)
+3. Escribir en la terminal:
+
+```powershell
+dotnet run Program.cs
+```
+
+### Tarea 2: leer archivos de texto
+
+```csharp
+static void SaveToFile(Person person)
+{
+  // ...
+  if (person is Student)
+  {
+    // ...
+    ReadFile(fileName);
+  }
+  else
+  {
+    // ...
+    ReadFile(fileName);
+  }
+}
+
+// ...
+static void ReadFile(string fileName)
+{
+  Console.WriteLine("The file was saved with the following content:");
+
+  StreamReader reader = new StreamReader(fileName);
+  Console.WriteLine();
+  Console.WriteLine(reader.ReadToEnd());
+}
+```
