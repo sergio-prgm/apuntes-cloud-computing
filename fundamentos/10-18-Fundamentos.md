@@ -43,7 +43,9 @@ public class Perro
 
 ## Definiciones de POO
 
-* *Miembros*: todos los elementos de los que se compone una clase. *Propiedades* y *Métodos* son tipos de miembros.
+* *Miembros*: todos los elementos de los que se compone una clase. *Propiedades*, *Métodos* y *Campos* son tipos de miembros.
+
+* *Campos*: son variables declarads dentro de una clase. Pueden ser variables de tipo valor o instancias de otras clases.
 
 * *Propiedades*: son propiedades de la clase qué existirán en cada una de las instancias de la misma. Pueden tener valores fijos (estáticos, constantes, etc. como <code>EdadDePerro</code>) o pueden ser distintos para cada instancia.
 

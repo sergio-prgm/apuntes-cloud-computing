@@ -1,5 +1,7 @@
 # Laboratorio 6: *I/O*
 
+## Generar archivo de clase en Visual Studio
+
 Para este laboratorio se parte de una serie de archivos con bastante contenido en ellos.
 Hay dos archivos de clases normales (*Student* e *Instructor*) y uno de una clase abstracta (*Person*).
 Para crear nuevos archivos de clase en Visual Studio hay que:
