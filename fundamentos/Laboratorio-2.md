@@ -1,4 +1,4 @@
-# Laboratorio 2
+# Laboratorio 2: conceptos del lenguaje de programación
 
 ## Ejercicio 1
 

@@ -1,4 +1,4 @@
-# Laboratorio 1
+# Laboratorio 1: introducción a la programación
 
 ## Ejercicio 1
 

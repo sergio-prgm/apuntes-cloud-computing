@@ -1,4 +1,4 @@
-# Laboratorio 3
+# Laboratorio 3: comprender el flujo del programa
 
 ## Ejercicio 1: Funciones de ejecución
 

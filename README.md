@@ -46,6 +46,12 @@ Este archivo pretende ser un índice en el que todos los aspectos de este curso 
 
 [Fibonacci](fundamentos/Laboratorio-Fibonacci.md)
 
+[Laboratorio 1: introducción a la programación](fundamentos/Laboratorio-1.md)
+
+[Laboratorio 2: conceptos del lenguaje de programación](fundamentos/Laboratorio-2.md)
+
+[Laboratorio 3: comprender el flujo del programa](fundamentos/Laboratorio-3.md)
+
 [Laboratorio 4: Estructuras de datos y algoritmos](fundamentos/Laboratorio-4.md)
 
 [Laboratorio 5: Depuración y Errores](fundamentos/Laboratorio-5.md)
