@@ -50,4 +50,6 @@ Este archivo pretende ser un índice en el que todos los aspectos de este curso 
 
 [Laboratorio 6: Entrada y Salida *I/O*](fundamentos/Laboratorio-6.md)
 
+[Laboratorio 7: Clases y Estructuras](fundamentos/Laboratorio-7.md)
+
 ## Python
