@@ -41,67 +41,20 @@ public class Perro
 }
 ```
 
-- *Atributos*: son propiedades de la clase qué existirán en cada una de las instancias de la misma. Pueden tener valores fijos (estáticos, constantes, etc. como <code>EdadDePerro</code>) o pueden ser distintos para cada instancia.
+## Definiciones de POO
 
-- *Constructor*: función que se debe llamar para instanciar una clase. Se suele utilizar para asignar valores a los atributos variables de dicha instancia.
+* *Miembros*: todos los elementos de los que se compone una clase. *Propiedades* y *Métodos* son tipos de miembros.
 
-- *Métodos*: son funciones que, generalmente, utilizan datos propios de la clase en la que se encuentran y que son propios de dichas clases, pudiendo modificar las variables entre otras funcionalidades.
+* *Propiedades*: son propiedades de la clase qué existirán en cada una de las instancias de la misma. Pueden tener valores fijos (estáticos, constantes, etc. como <code>EdadDePerro</code>) o pueden ser distintos para cada instancia.
+
+* *Constructor*: función que se debe llamar para instanciar una clase. Se suele utilizar para asignar valores a los atributos variables de dicha instancia.
+
+* *Métodos*: son funciones que, generalmente, utilizan datos propios de la clase en la que se encuentran y que son propios de dichas clases, pudiendo modificar las variables entre otras funcionalidades.
 
 Para instanciar una clase debe usarse la palabra especial <code>new</code> seguido del nombre de la clase y, si los tiene, los argumentos del constructor entre paréntesis.
 Cada instancia de una clase es un objeto.
 
-Para acceder a los atributos o métodos públicos de la clase se usa la notación de punto (ej. <code>Perrico.raza</code> o <code>Perrico.Comer()</code>).
-
-## Fibonacci
-
-Hacer la secuencia de Fibonacci con *for*, con *while* y de forma recursiva.
-
-### Fibonacci *for*
-
-```csharp
-public static List<int> FibonacciFor(int n)
-{
-  int n1 = 0;
-  int n2 = 1;
-  List<int> result = new() { n1, n2 };
-  for (var i = 2; i < n; i++)
-  {
-    result.Add(result[i - 1] + result[i - 2]);
-  }
-  return result;
-}
-```
-
-### Fibonacci *while*
-
-```csharp
-public static List<int> FibonacciWhile(int n)
-{
-  int n1 = 0;
-  int n2 = 1;
-  int i = 2;
-  List<int> result = new(n) { n1, n2 };
-  while (i < n)
-  {
-    result.Add(result[i - 1] + result[i - 2]);
-    i++;
-  }
-  return result;
-}
-```
-
-### Fibonacci *recursivo*
-
-```csharp
-public static int FibonacciRecursive(int n)
-{
-  if (n == 2 || n == 1)
-    return n - 1;
-  return FibonacciRecursive(n - 1) + FibonacciRecursive(n - 2);
-}
-```
-
-> **Función recursiva**: función que se llama a sí misma. Debe tener un punto de terminación o caso base que detenga la ejecución de la función, porque si no se implementa se produce un bucle infinito.
+Para acceder a las propiedades o métodos públicos de la clase se usa la notación de punto (ej. <code>Perrico.raza</code> o <code>Perrico.Comer()</code>).
 
 ## Estructuras de datos
 
@@ -173,124 +126,3 @@ List<float> floatList = new() { 2.3f, 3.4f, 5.4f};
 ```
 
 ---
-
-## Laboratorio 4: estructuras de datos y algoritmos
-
-### Ejercicio 1: pseudocódigo
-
-#### Tarea 1: escribir pseudocódigo
-
-```ts
-function populateList(list: array, item: {name: string, description: string}): void {
-  list.push(item)
-}
-
-function displayList(list: array): void {
-  list.foreach(item => console.log(item))
-}
-
-function removeListItem(list: array, itemName: string): void {
-  list.remove(itemName)
-}
-```
-
-#### Tarea 2: taducir pseudocódigo
-
-```chsarp
-static void populateList(List list, string name) {}
-static void displayList(List list) {}
-static removeListItem(List list, string itemName) {}
-```
-
-### Ejercicio 2: creación de estructuras de datos
-
-#### Tarea 1: crear una matriz(*Array*)
-
-```csharp
-private static void Main(string[] args)
-{
-  float[] gradesArray = new float[5];
-  addGrades(gradesArray);
-  displayGrades(gradesArray);
-}
-static void addGrades(float[] gradesArray)
-{
-  gradesArray[0] = 98;
-  gradesArray[1] = 99;
-  gradesArray[2] = 89;
-  gradesArray[3] = 95;
-  gradesArray[4] = 96;
-}
-
-static void displayGrades(float[] gradesArray)
-{
-  foreach (double item in gradesArray)
-    Console.WriteLine(item);
-}
-```
-
-#### Tarea 2: implementar una pila(*Stack*)
-
-> **Nota sobre las estructuras de datos**: al implementar algunas estructuras de datos en C# se pueden utilizar lo que se conoce como *tipos genéricos*, que es una manera de declarar el tipo de variables que se almacenarán dentro de estas estructuras. El problema es que algunos métodos no se corresponden a los que no utilizan estos tipos y pueden llevar a errores. Por eso, a no ser que sea necesario declarar explícitamente el *tipo genérico* de las estructuras de datos, es conveniente revisar cuales están siendo empleados. Para ello, basta con ir al inicio del archivo y ver si existe una declaración parecida a <code>using System.Collections.Generics;</code>
-
-> Nota de la nota: los tipos genéricos pueden ser de gran utilidad y no deben verse como una mala opción.
-
-```csharp
-// Dentro de Main(), inmediatamente después de displayGrades...
-  Stack myStack = new Stack();
-  pushStack(gradesArray, myStack);
-  popStack(myStack);
-  popStack(myStack);
-  // ...
-}
-
-static void pushStack(float[] gradesArray, Stack stack)
-{
-  foreach (float item in gradesArray)
-    stack.Push(item);
-}
-
-static void popStack(Stack stack)
-{
-  Console.WriteLine("Item removed from the stack: ");
-  float item = (float)stack.Pop()!; // El ! al final es para que no salga el subrayado verde
-  Console.WriteLine(item);
-}
-```
-
-#### Tarea 3: implementar una lista
-
-```csharp
-// Dentro de Main(), después de popStack...
-  SortedList myCourses = new SortedList();
-  populateList(myCourses);
-  displayList(myCourses, "CS201");
-  removeListItem(myCourses, "CS201");
-}
-static void populateList(SortedList list)
-{
-  list.Add("CS101", "Introduction to Computer Science");
-  list.Add("CS102", "Data Structures and Algorithm Analysis");
-  list.Add("CS201", "Introduction to Databases");
-  list.Add("CS301", "Introduction to Object-Oriented Programming");
-}
-
-static void displayList(SortedList list, string key)
-{
-  int index;
-  string course;
-  index = list.IndexOfKey(key);
-  course = (string)list.GetByIndex(index)!;
-  Console.WriteLine(course);
-}
-
-static void removeListItem(SortedList list, string key)
-{
-  int index;
-  string course;
-  index = list.IndexOfKey(key);
-  course = (string)list.GetByIndex(index)!;
-  list.Remove(key);
-  Console.WriteLine($"{course} was removed from the list.");
-}
-```
