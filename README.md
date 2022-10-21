@@ -40,6 +40,8 @@ Este archivo pretende ser un índice en el que todos los aspectos de este curso 
 
 [Ejecutar en modo *debug* y sin él](fundamentos/Laboratorio-6.md#ejecutar-en-debug-vs-normal)
 
+[Sobrecarga](fundamentos/Laboratorio-7.md#sobrecarga-overloading)
+
 ### Ejercicios C\#
 
 [Fibonacci](fundamentos/Laboratorio-Fibonacci.md)

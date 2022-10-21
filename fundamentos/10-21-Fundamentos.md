@@ -26,7 +26,7 @@ La programacion orientada a objetos es un paradigma cuyo propósito es organizar
 
 * ***Abstracción***:
 
-* ***Polimorfismo***:
+* ***Polimorfismo***: una misma clase puede derivar en múltiples formas de la misma. Se relaciona fundamentalmente con las características anteriores.
 
 Otros conceptos importantes relativos a la *POO*:
 

@@ -101,6 +101,11 @@ namespace Laboratorio_7
 }
 ```
 
+## Sobrecarga *Overloading*
+
+Se refiere a la creación de métodos (también constructores) con el mismo nombre, pero con diferentes firmas y definiciones. Para seleccionar uno u otro se utilizan distinto número y tipo de argumentos al ejecutarlos.
+Tanto métodos y funciones como clases permiten el uso de *Overloading*. En el este ejercicio el constructor de CourseC usa esta técnica: tiene uno vacío y otro al que hay que pasarle *title*, *credits*, *prog* e *inst*.
+
 ### Tarea 2: encapsular datos y funcionalidad en una clase
 
 ```csharp
