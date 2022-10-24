@@ -16,6 +16,8 @@ Este archivo pretende ser un índice en el que todos los aspectos de este curso 
 
 [Estructuras de datos](fundamentos/10-18-Fundamentos.md#estructuras-de-datos)
 
+[Autenticación y Autorización](fundamentos/10-24-Fundamentos.md)
+
 ## Mejores prácticas
 
 [Nombrar variables](fundamentos/Laboratorio-2.md#mejores-prácticas-nombrar-variables)
