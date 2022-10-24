@@ -62,4 +62,6 @@ Este archivo pretende ser un índice en el que todos los aspectos de este curso 
 
 [Laboratorio 8: Programacion Orientada a Objetos](fundamentos/Laboratorio-8.md)
 
+[Laboratorio 9: Seguridad y Rendimiento](fundamentos/Laboratorio-9.md)
+
 ## Python
