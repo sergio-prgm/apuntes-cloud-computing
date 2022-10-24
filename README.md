@@ -60,4 +60,6 @@ Este archivo pretende ser un índice en el que todos los aspectos de este curso 
 
 [Laboratorio 7: Clases y Estructuras](fundamentos/Laboratorio-7.md)
 
+[Laboratorio 8: Programacion Orientada a Objetos](fundamentos/Laboratorio-8.md)
+
 ## Python
