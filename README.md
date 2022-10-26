@@ -67,3 +67,5 @@ Este archivo pretende ser un índice en el que todos los aspectos de este curso 
 [Laboratorio 9: Seguridad y Rendimiento](fundamentos/Laboratorio-9.md)
 
 ## Python
+
+[Tipos, operadores y colecciones básicos](python/10-26-Python.md)
