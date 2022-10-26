@@ -60,7 +60,7 @@ false_vals = False, 0, None, [], "", (), {}
 
 ### Strings (`str`)
 
-Los strings son un tipo de colecciones inmutables, que tienen algunos métodos especiales para operar con ellas (capitalize, center, format, lower, etc.) aparte de los métodos (count e index) y funciones (sorted, len, max, min, etc.) comunes de colecciones .
+Los strings son un tipo de colecciones inmutables, que tienen algunos métodos especiales para operar con ellas (capitalize, center, format, lower, etc.) aparte de los métodos (count e index) y funciones (sorted, len, max, min, etc.) comunes de colecciones. Permiten hacer slicing (`[]`) para acceder a valores o subcadenas, pero no para modificarlos.
 
 ```py
 str1 = "Madrid"
@@ -99,7 +99,7 @@ index_str = str1.index("a")     # Same as .find() but returns Error if not found
 
 ### Tuplas (`tuple`)
 
-Colección ordenada de tipos inmutables. Se suelen usar como devolución de funciones y commo índices en diccionarios para implementar colecciones más complejas (grafos, etc.).
+Colección ordenada e inmutable. Se suelen usar como devolución de funciones y commo índices en diccionarios para implementar colecciones más complejas (grafos, etc.). Al igual que los `str`, solo permiten hacer slicing (`[]`) para acceder a valores y "subtuplas", pero no para modificarlas.
 
 ```py
 tupla = (1, 2, 3, "ele", True, 3.4)
@@ -123,7 +123,8 @@ fromt = list(t)               # Convert tuple to list
 
 ### Listas (`list`)
 
-Colección mutable y dinámica. Es la colección predeterminada y la que mayor uso tiene. Contiene gran número de métodos de manipulación y la mayor flexibilidad en su uso (reasignación, *slicing*, etc.), pero no está tan optimizada como otros tipos más limitados.
+Colección mutable y ordenada. Es la colección predeterminada y la que mayor uso tiene. Contiene gran número de métodos de manipulación y la mayor flexibilidad en su uso (reasignación, *slicing*, etc.), pero no está tan optimizada como otros tipos más limitados.
+Permiten acceder, crear "sublistas" y modificarlos mediante slicing(`[start:end:step]`).
 
 ```py
 l: list = [1, 2, False, "abc", 2.3, (1, 2), [3, 4, 5], {"a", 4}]
@@ -168,7 +169,8 @@ nl.sort()                   # sort list, key can be specified (lambda, etc), rev
 
 ### Sets (`set`)
 
-Colecciones sin orden, mutables y que solo permiten valores únicos. Se comportan como claves de diccionarios sin valor. Con ellos se pueden hacer operaciones matemáticas como uniones, diferencias, intersecciones, etc.
+Colecciones sin orden, mutables y que solo permiten valores únicos. Se comportan como claves de diccionarios sin valor. Con ellos se pueden hacer operaciones matemáticas como uniones, diferencias, intersecciones, etc.7
+El uso de slicing no tiene sentido puesto que sus valores están desordenados.
 
 ```py
 se: set = { 1, 2, 3, 4, 2, 1 }      # Removes the repeated elements
@@ -188,7 +190,7 @@ rem_set = se.remove(3)              # Removes n from Set. Raises exception if no
 
 ### Diccionarios (`dict`)
 
-Colecciones de tipo clave(k), valor(v). Su sintaxis se asemeja a objetos JSON. Las claves deben ser de un tipo inmutable (números, strings o tuplas), mientras que los valores pueden ser de cualquier tipo, sea inmutable o no. Si se intenta acceder a una *k* que no existe, se genera un error *KeyError*. Para evitarlo se utiliza el método `get(key, default)`.
+Colecciones de tipo clave(k), valor(v). Su sintaxis se asemeja a objetos JSON. Las claves deben ser de un tipo inmutable (números, strings o tuplas), mientras que los valores pueden ser de cualquier tipo, sea inmutable o no. Si se intenta acceder a una *k* que no existe, se genera un error *KeyError*. Para evitarlo se utiliza el método `get(key, default)`. Para acceder a un valor de un diccionario se usa *bracket notation*: `diccionario[k] => v`.
 
 ```py
 diccionario = {
