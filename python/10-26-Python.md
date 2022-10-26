@@ -60,7 +60,7 @@ false_vals = False, 0, None, [], "", (), {}
 
 ### Strings (`str`)
 
-Los strings son un tipo de colecciones inmutables, que tienen algunos métodos especiales para operar con ellas (capitalize, center, format, lower, etc.) aparte de los métodos (count e index) y funciones (sorted, len, max, min, etc.)comunes de colecciones .
+Los strings son un tipo de colecciones inmutables, que tienen algunos métodos especiales para operar con ellas (capitalize, center, format, lower, etc.) aparte de los métodos (count e index) y funciones (sorted, len, max, min, etc.) comunes de colecciones .
 
 ```py
 str1 = "Madrid"
@@ -97,11 +97,9 @@ index_str = str1.index("a")     # Same as .find() but returns Error if not found
 # To be continued
 ```
 
-Tipos de datos complejos
-
 ### Tuplas (`tuple`)
 
-Colección ordenada de tipos inmutables. Se suelen usar como devolución de funciones y commo índices en diccionarios para implementar colecciones más complejos (grafos, etc.).
+Colección ordenada de tipos inmutables. Se suelen usar como devolución de funciones y commo índices en diccionarios para implementar colecciones más complejas (grafos, etc.).
 
 ```py
 tupla = (1, 2, 3, "ele", True, 3.4)
@@ -125,7 +123,7 @@ fromt = list(t)               # Convert tuple to list
 
 ### Listas (`list`)
 
-Colección mutable y dinámica. Es la colección predeterminada. Contiene gran número de métodos de manipulación y la mayor flexibilidad en su uso (reasignación, *slicing*, etc.), pero no está tan optimizada como otros tipos más limitados.
+Colección mutable y dinámica. Es la colección predeterminada y la que mayor uso tiene. Contiene gran número de métodos de manipulación y la mayor flexibilidad en su uso (reasignación, *slicing*, etc.), pero no está tan optimizada como otros tipos más limitados.
 
 ```py
 l: list = [1, 2, False, "abc", 2.3, (1, 2), [3, 4, 5], {"a", 4}]
@@ -166,7 +164,7 @@ nl.reverse()                # reverses list
 nl.sort()                   # sort list, key can be specified (lambda, etc), reverse=True is an option
 ```
 
-Función range(\_start, end, step). Genera una secuencia de números que van desde \_start (por defecto es 0), hasta end (requerido), con un *paso* *step*
+> Función range(\_start, end, step). Genera una secuencia de números que van desde \_start (por defecto es 0), hasta end (requerido), con un *paso* *step*
 
 ### Sets (`set`)
 
