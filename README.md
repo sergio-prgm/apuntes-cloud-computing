@@ -69,3 +69,5 @@ Este archivo pretende ser un índice en el que todos los aspectos de este curso 
 ## Python
 
 [Tipos, operadores y colecciones básicos](python/10-26-Python.md)
+
+[Control de flujo, bucles y funciones](python/10-27-Python.md)
